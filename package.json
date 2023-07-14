@@ -1,6 +1,6 @@
 {
   "name": "react-native-echarts-kit",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Echarts SVG for react native.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
