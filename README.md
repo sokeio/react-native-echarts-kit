@@ -6,7 +6,7 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/bitsudo/react-native-echarts-kit.svg?style=flat)](https://github.com/bitsudo/react-native-echarts-kit/graphs/contributors)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bitsudo/react-native-echarts-kit/pulls)
 [![license](https://img.shields.io/github/license/bitsudo/react-native-echarts-kit.svg?style=flat)](https://github.com/bitsudo/react-native-echarts-kit/blob/main/LICENSE)
-
+i move repos : https://github.com/bykit/react-native-echarts-kit
 [React Native](https://reactnative.dev/) version of [Apache Echarts](https://github.com/apache/echarts), based on [react-native-svg](https://github.com/software-mansion/react-native-svg). This awesome library offers significantly improved performance compared to WebView-based solutions.
 
 Checkout the full documentation [here](https://bitsudo.github.io/react-native-echarts-kit/) or [https://bit-sudo.com/open-source/react-native-echarts-kit](https://bit-sudo.com/open-source/react-native-echarts-kit).
