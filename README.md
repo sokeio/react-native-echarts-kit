@@ -1,17 +1,17 @@
-# [![](./logo.svg)](https://bitsudo.github.io/react-native-echarts-kit/)
+# [![](./logo.svg)](https://BytePlatform.github.io/react-native-echarts-kit/)
 
 [![npm version](https://img.shields.io/npm/v/react-native-echarts-kit.svg?style=flat)](https://www.npmjs.com/package/react-native-echarts-kit)
 [![npm downloads](https://img.shields.io/npm/dm/react-native-echarts-kit)](https://www.npmjs.com/package/react-native-echarts-kit)
-[![issues](https://img.shields.io/github/issues/bitsudo/react-native-echarts-kit.svg?style=flat)](https://github.com/bitsudo/react-native-echarts-kit/issues)
-[![GitHub contributors](https://img.shields.io/github/contributors/bitsudo/react-native-echarts-kit.svg?style=flat)](https://github.com/bitsudo/react-native-echarts-kit/graphs/contributors)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bitsudo/react-native-echarts-kit/pulls)
-[![license](https://img.shields.io/github/license/bitsudo/react-native-echarts-kit.svg?style=flat)](https://github.com/bitsudo/react-native-echarts-kit/blob/main/LICENSE)
+[![issues](https://img.shields.io/github/issues/BytePlatform/react-native-echarts-kit.svg?style=flat)](https://github.com/BytePlatform/react-native-echarts-kit/issues)
+[![GitHub contributors](https://img.shields.io/github/contributors/BytePlatform/react-native-echarts-kit.svg?style=flat)](https://github.com/BytePlatform/react-native-echarts-kit/graphs/contributors)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/BytePlatform/react-native-echarts-kit/pulls)
+[![license](https://img.shields.io/github/license/BytePlatform/react-native-echarts-kit.svg?style=flat)](https://github.com/BytePlatform/react-native-echarts-kit/blob/main/LICENSE)
 
 # I move repos : https://github.com/bykit/react-native-echarts-kit
 
 [React Native](https://reactnative.dev/) version of [Apache Echarts](https://github.com/apache/echarts), based on [react-native-svg](https://github.com/software-mansion/react-native-svg). This awesome library offers significantly improved performance compared to WebView-based solutions.
 
-Checkout the full documentation [here](https://bitsudo.github.io/react-native-echarts-kit/) or [https://bit-sudo.com/open-source/react-native-echarts-kit](https://bit-sudo.com/open-source/react-native-echarts-kit).
+Checkout the full documentation [here](https://BytePlatform.github.io/react-native-echarts-kit/) or [https://bit-sudo.com/open-source/react-native-echarts-kit](https://bit-sudo.com/open-source/react-native-echarts-kit).
 ## About
 
 - 🔥 The same usage as Apache ECharts
@@ -31,7 +31,7 @@ Install [react-native-svg](https://github.com/software-mansion/react-native-svg#
 
 ## Usage
 
-![example](https://raw.githubusercontent.com/bitsudo/react-native-echarts-kit/main/screenshots/example.jpg)
+![example](https://raw.githubusercontent.com/BytePlatform/react-native-echarts-kit/main/screenshots/example.jpg)
 
 ### Example
 

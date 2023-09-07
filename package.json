@@ -1,6 +1,6 @@
 {
   "name": "react-native-echarts-kit",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Echarts SVG for react native.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -42,13 +42,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/bitsudo/react-native-echarts-kit",
+  "repository": "https://github.com/BytePlatform/react-native-echarts-kit",
   "author": "devhau",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bitsudo/react-native-echarts-kit/issues"
+    "url": "https://github.com/BytePlatform/react-native-echarts-kit/issues"
   },
-  "homepage": "https://github.com/bitsudo/react-native-echarts-kit#readme",
+  "homepage": "https://github.com/BytePlatform/react-native-echarts-kit#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
