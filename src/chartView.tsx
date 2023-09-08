@@ -14,6 +14,7 @@ export type ChartViewProps = ViewProps & {
   theme?: string;
   height?: number | Function;
   width?: number | Function;
+  lazyloading?: boolean;
 };
 
 const ChartView = (
@@ -23,6 +24,7 @@ const ChartView = (
     theme = 'light',
     height = ({ _height }: any) => _height,
     width = ({ _width }: any) => _width,
+    lazyloading,
   }: ChartViewProps,
   ref: ForwardedRef<(echarts.ECharts & any) | null>
 ) => {
@@ -31,7 +33,16 @@ const ChartView = (
   const [chartWidth, setChartWidth] = useState(0);
   const [viewHeight, setViewHeight] = useState(0);
   const [viewWidth, setViewWidth] = useState(0);
+  const [LazyLoadingFlg, setLazyLoadingFlg] = useState(lazyloading ?? true);
   const [chart, setChart] = useState<echarts.ECharts | undefined>();
+  useEffect(() => {
+    if (LazyLoadingFlg) {
+      setTimeout(() => {
+        setLazyLoadingFlg(false);
+      }, 500);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   useEffect(() => {
     let _chart: echarts.ECharts;
     if (chartWidth > 0 && chartHeight > 0) {
@@ -50,7 +61,7 @@ const ChartView = (
         }
       }
     }
-  }, [option, theme, chartHeight, chartWidth, chart]);
+  }, [option, theme, chartHeight, chartWidth, chart, chartRef]);
 
   useImperativeHandle(ref, () => chart, [chart]);
 
@@ -85,7 +96,7 @@ const ChartView = (
       // eslint-disable-next-line react-native/no-inline-styles
       style={[style, { flex: 1, height: '100%', width: '100%' }]}
     >
-      <SvgChart ref={chartRef} />
+      {!LazyLoadingFlg && <SvgChart ref={chartRef} />}
     </View>
   );
 };

@@ -9,6 +9,7 @@ export type ChartContainerProps = ViewProps & {
   height?: number | Function;
   width?: number | Function;
   containerStyle?: StyleProp<ViewStyle> | undefined;
+  lazyloading?: boolean;
 };
 
 const ChartContainer = (
@@ -19,6 +20,7 @@ const ChartContainer = (
     height,
     width,
     containerStyle,
+    lazyloading,
   }: ChartContainerProps,
   ref: ForwardedRef<(echarts.ECharts & any) | null>
 ) => {
@@ -31,6 +33,7 @@ const ChartContainer = (
         theme={theme}
         height={height}
         width={width}
+        lazyloading={lazyloading}
       />
     </View>
   );
