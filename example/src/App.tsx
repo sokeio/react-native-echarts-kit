@@ -1,8 +1,11 @@
 import * as React from 'react';
 import { Button, StyleSheet, View } from 'react-native';
 import { gestureHandlerRootHOC } from 'react-native-gesture-handler';
-import { ChartApp, ChartContainer } from 'react-native-echarts-kit';
-import * as echarts from 'echarts/core';
+import {
+  ChartApp,
+  ChartContainer,
+  ChartViewRef,
+} from 'react-native-echarts-kit';
 import { BarChart } from 'echarts/charts';
 import { EChartsOption } from 'echarts';
 
@@ -28,7 +31,7 @@ const option: EChartsOption = {
   ],
 };
 function App() {
-  const refChart = React.useRef<echarts.ECharts>(null);
+  const refChart = React.useRef<ChartViewRef>(null);
   return (
     <View style={styles.container}>
       <ChartContainer

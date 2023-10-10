@@ -2,6 +2,7 @@ import { EChartsOption } from 'echarts';
 import React, { ForwardedRef, forwardRef, memo } from 'react';
 import { StyleProp, View, ViewProps, ViewStyle } from 'react-native';
 import ViewChart from './chartView';
+import { ChartViewRef } from './types';
 
 export type ChartContainerProps = ViewProps & {
   option?: EChartsOption;
@@ -20,9 +21,9 @@ const ChartContainer = (
     height,
     width,
     containerStyle,
-    lazyloading,
+    lazyloading = true,
   }: ChartContainerProps,
-  ref: ForwardedRef<(echarts.ECharts & any) | null>
+  ref: ForwardedRef<ChartViewRef>
 ) => {
   return (
     <View style={containerStyle}>

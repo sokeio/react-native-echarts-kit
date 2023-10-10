@@ -37,8 +37,12 @@ Install [react-native-svg](https://github.com/software-mansion/react-native-svg#
 ```js
 import * as React from 'react';
 import { Button, StyleSheet, View } from 'react-native';
-import { ChartContainer, ChartApp } from 'react-native-echarts-kit';
-import * as echarts from 'echarts/core';
+import { gestureHandlerRootHOC } from 'react-native-gesture-handler';
+import {
+  ChartApp,
+  ChartContainer,
+  ChartViewRer,
+} from 'react-native-echarts-kit';
 import { BarChart } from 'echarts/charts';
 import { EChartsOption } from 'echarts';
 
@@ -63,10 +67,8 @@ const option: EChartsOption = {
     },
   ],
 };
-// Component usage
-export default function App() {
-  
-  const refChart = React.useRef<echarts.ECharts>(null);
+function App() {
+  const refChart = React.useRef<ChartViewRer>(null);
   return (
     <View style={styles.container}>
       <ChartContainer
@@ -77,33 +79,33 @@ export default function App() {
       <Button
         title="123"
         onPress={() =>
-            refChart.current?.setOption({
-              xAxis: {
-                type: 'category',
-                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          refChart.current?.setOption({
+            xAxis: {
+              type: 'category',
+              data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            },
+            yAxis: {
+              type: 'value',
+            },
+            detail: {
+              valueAnimation: true,
+              formatter: '{value}',
+            },
+            series: [
+              {
+                data: [
+                  Math.random() * 1000,
+                  Math.random() * 1000,
+                  Math.random() * 1000,
+                  Math.random() * 1000,
+                  Math.random() * 1000,
+                  Math.random() * 1000,
+                  Math.random() * 1000,
+                ],
+                type: 'bar',
               },
-              yAxis: {
-                type: 'value',
-              },
-              detail: {
-                valueAnimation: true,
-                formatter: '{value}',
-              },
-              series: [
-                {
-                  data: [
-                    Math.random() * 1000,
-                    Math.random() * 1000,
-                    Math.random() * 1000,
-                    Math.random() * 1000,
-                    Math.random() * 1000,
-                    Math.random() * 1000,
-                    Math.random() * 1000,
-                  ],
-                  type: 'bar',
-                },
-              ],
-            })
+            ],
+          })
         }
       >
         Tesst
@@ -120,6 +122,7 @@ const styles = StyleSheet.create({
   },
   viewChart: { height: 250, width: '100%' },
 });
+export default gestureHandlerRootHOC(App);
 ```
 ## Contributing
 

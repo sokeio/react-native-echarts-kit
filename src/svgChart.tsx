@@ -50,9 +50,6 @@ import type {
   SVGVNode,
 } from './types';
 
-export { SVGRenderer } from './SVGRenderer';
-export * from './types';
-
 setPlatformAPI({ measureText });
 
 const tagMap = {

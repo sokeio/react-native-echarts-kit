@@ -5,6 +5,7 @@ import type {
   PinchGesture,
   TapGesture,
 } from 'react-native-gesture-handler';
+import * as echarts from 'echarts/core';
 
 export type HandlerName =
   | 'click'
@@ -83,3 +84,10 @@ export type SVGChartProps = CommonChartProps & {
 export type ChartElement = {
   dispatchEvents: DispatchEvents;
 };
+export type ChartViewRef =
+  | {
+      setOption: (option: any, ops: any | undefined) => void;
+      getChart: () => echarts.ECharts | undefined;
+    }
+  | null
+  | undefined;
